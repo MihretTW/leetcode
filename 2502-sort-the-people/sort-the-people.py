@@ -1,5 +1,6 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+       
         n=len(names)
         for i in range(n):
             for j in range(n-1):
@@ -11,6 +12,7 @@ class Solution:
                     names[j]=names[j+1]
                     names[j+1]=y
         return names
+                   
                     
         
         
