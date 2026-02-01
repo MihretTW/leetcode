@@ -1,13 +1,7 @@
 class Solution:
     def minimumCost(self, nums: List[int]) -> int:
-        first = nums[0]
-        m1 = m2 = float('inf')
+        arr=nums[1:]
+        arr.sort()
+        return nums[0]+arr[0]+arr[1]
 
-        for x in nums[1:]:
-            if x < m1:
-                m2 = m1
-                m1 = x
-            elif x < m2:
-                m2 = x
-
-        return first + m1 + m2
+        
