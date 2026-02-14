@@ -8,8 +8,8 @@ class Solution:
             if x<=limit:
                 count+=1
                 i+=1
-                j-=1
+                
             else:
                 count+=1
-                j-=1
+            j-=1
         return count
