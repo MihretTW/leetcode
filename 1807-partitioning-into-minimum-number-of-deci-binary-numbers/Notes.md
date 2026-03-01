@@ -1,1 +1,1 @@
-<h2>partitioning-into-minimum-number-of-deci-binary-numbers Notes</h2><hr>[ Time taken: 18 m 40 s ]
+<h2>partitioning-into-minimum-number-of-deci-binary-numbers Notes</h2><hr>[ Time taken: 7m 36s ]
