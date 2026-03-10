@@ -2,8 +2,8 @@ class NumArray:
 
     def __init__(self, nums: List[int]):
         self.prefix_sum=[0]
-        for i in range(len(nums)):
-            self.prefix_sum.append(self.prefix_sum[-1]+nums[i])
+        for n in nums:
+            self.prefix_sum.append(self.prefix_sum[-1]+n)
         
 
     def sumRange(self, left: int, right: int) -> int:
