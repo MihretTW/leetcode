@@ -1,17 +1,17 @@
 class Solution:
-    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
-        ans=[]
-        a=set()
-        b=set()
-        commen=0
-        for i in range(len(A)):
-            a.add(A[i])
-            b.add(B[i])
+    def findThePrefixCommonArray(self, A, B):
+        n = len(A)
+        res = []
 
-            if A[i] in b:
-                commen+=1
-            if B[i] in a and A[i]!=B[i]:
-                commen+=1
-            ans.append(commen)
-        return ans
+        for i in range(n):
+            count = 0
             
+            for j in range(i + 1):  
+                for k in range(i + 1):  
+                    if A[j] == B[k]:
+                        count += 1
+                        break   
+            
+            res.append(count)
+
+        return res
