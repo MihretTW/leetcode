@@ -3,10 +3,12 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        n=len(matrix)
-        l = [row[:] for row in matrix]
-        for i in range(n):
-            k=0
-            for j in range(n-1,-1,-1):
-                matrix[i][k]=l[j][i]
-                k+=1
+        m=matrix
+        for i in range(len(matrix)):
+            for j in range(i+1,len(matrix)):
+                matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
+        for i in range(len(matrix)):
+            matrix[i].reverse()
+        
+
+        
