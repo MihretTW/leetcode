@@ -1,10 +1,7 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        d={}
-        for ch in strs:
-            if str(sorted(ch)) in d:
-                d[str(sorted(ch))].append(ch)
-            else:
-                d[str(sorted(ch))]=[ch]
+        d=defaultdict(list)
+        for ch in strs: 
+            d[str(sorted(ch))].append(ch)      
         return list(d.values())
         
